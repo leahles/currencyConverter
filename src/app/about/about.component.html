@@ -1,0 +1,6 @@
+<h1>History</h1>
+<mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of historySearch">
+        {{item.sum | number: '1.2-2'}} {{item.currentCurrency}} = {{item.result  | number: '1.2-2'}} {{item.newCurrency}}
+    </mat-list-item>
+</mat-list>

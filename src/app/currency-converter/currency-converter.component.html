@@ -1,0 +1,30 @@
+<h1>Currency Converter</h1>
+<form [formGroup]="currencyConverterForm">
+  <mat-form-field class="example-full-width">
+    <input matInput type="number" placeholder="Sum" formControlName="sum">
+  </mat-form-field>
+  <div>
+    From:
+    <mat-form-field class="select">
+      <mat-select formControlName="currentCurrency">
+        <mat-option *ngFor="let currency of currenciesList | keyvalue" [value]="currency">
+          {{currency.key}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    To:
+    <mat-form-field class="select">
+      <mat-select formControlName="newCurrency">
+        <mat-option *ngFor="let currency of currenciesList | keyvalue" [value]="currency">
+          {{currency.key}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
+<span class="error" *ngIf="currencyConverterForm.errors!">Same Currency!</span>
+<div *ngIf="currencyConverterForm.valid">
+  <p class="result">
+    {{currencyConverterForm.value.sum | number: '1.2-2'}} {{currencyConverterForm.value.currentCurrency.key }} =
+    {{result | number: '1.2-2'}} {{currencyConverterForm.value.newCurrency.key}}
+</div>

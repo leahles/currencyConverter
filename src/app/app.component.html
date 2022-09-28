@@ -1,0 +1,10 @@
+<nav mat-tab-nav-bar>
+    <a  mat-tab-link (click)="activeLink = 'Currency Converter'" [active]="activeLink == 'Currency Converter'"
+        routerLink="/currencyConverter">
+        Currency Converter
+    </a>
+    <a mat-tab-link (click)="activeLink = 'About'" [active]="activeLink == 'About'" routerLink="/about">
+        About
+    </a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+:host{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin: 5px;
+}
+.error{
+    color:red
+}
+.mat-form-field.select{
+    margin:8px;
+    width: 100px;
+}
+.result
+{
+    color:#3f51b5;
+    font-size: large;
+}
+
+#content {
+
+}
